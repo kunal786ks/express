@@ -10,11 +10,6 @@ const logger=function(req,res,next){
     next();
 }
 
-
-
-
-
-
 //middleware
 app.use(express.json())//it will pass the request.body in the post
 app.use(logger)
