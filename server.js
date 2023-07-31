@@ -34,7 +34,16 @@ const movieSchema=new mongoose.Schema({
     },
 })//based on this schema we can create a model
 
-const movie=mongoose.model('Movie',movieSchema);//here we created the model
+const Movie=mongoose.model('Movie',movieSchema);//here we created the model
+
+const testMovie=new Movie({
+    name:'Die hard',
+    description:'Action related movie',
+    duration:140,
+    ratings:5,
+});
+
+testMovie.save();
 
 const port = process.env.PORT;
 app.listen(port, () => {
